@@ -33,3 +33,14 @@
     git clone https://github.com/DataArk/CHIP2021-Task1-Top1
     python src/ckip2021_task1_top1.py
 ```
+
+# Data Source (3): Medical_Word
+- Need to confirm with `Spacy or Sci-Spacy or Stanza NER module` (Filtering out Disease or Symptoms)
+- https://github.com/WENGSYX/Chinese-Word2vec-Medicine/
+```
+    see processed_data/med_words.json (To be filtered by NER module.)
+
+    Or
+
+    python src/med_word.py
+```
