@@ -27,6 +27,7 @@
 
 # Data Source (2): CHIP2021
 - https://github.com/DataArk/CHIP2021-Task1-Top1
+- data_path: "CHIP2021-Task1-Top1/data/source_datasets/fliter_train_result2.txt"
 ```
     git clone https://github.com/DataArk/CHIP2021-Task1-Top1
     python src/ckip2021_task1_top1.py
