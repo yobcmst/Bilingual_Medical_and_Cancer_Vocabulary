@@ -6,7 +6,7 @@ from opencc import OpenCC
 from deep_translator import GoogleTranslator
 
 
-def load_med_word(path: "med_word.txt") -> List[str]:
+def load_med_word(path: str) -> List[str]:
     """TODO: convert all the zh-tw into en text ?"""
     with open(path, encoding="utf-8") as f:
         f_lst = f.readlines()
@@ -44,7 +44,7 @@ def _translate_to_en(f_lst: List[str]):
 
 if __name__ == "__main__":
     translator = GoogleTranslator(source="zh-tw", target="en")
-    f_lst = load_med_word("med_word.txt")
+    f_lst = load_med_word("Chinese-Word2vec-Medicine/med_word.txt")
     f_lst_en = _translate_to_en(f_lst)
     f_lst_en_all = list(chain.from_iterable([t_text.split("\n") for t_text in f_lst_en]))
 
@@ -54,5 +54,5 @@ if __name__ == "__main__":
 
     records = df.to_dict("records")
 
-    with open("med_words.json", "w") as f:
+    with open("processed_data/med_words.json", "w") as f:
         json.dump(records, f)
